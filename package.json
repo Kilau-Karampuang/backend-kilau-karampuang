@@ -1,4 +1,12 @@
 {
+  "name": "backend-kilau-karampuang",
+  "version": "1.0.0",
+  "description": "backend services for kilau karampuang",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
