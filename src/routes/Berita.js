@@ -8,10 +8,12 @@ const {
   deleteBerita
 } = require("../controllers/Berita");
 
-beritaRoutes.post("/", createBerita);
+const { ensureAuthenticated } = require("../middlewares/Auth");
+
+beritaRoutes.post("/", ensureAuthenticated, createBerita);
 beritaRoutes.get("/", getAllBerita);
 beritaRoutes.get("/:id", getBeritaById);
-beritaRoutes.put("/:id", updateBerita);
-beritaRoutes.delete("/:id", deleteBerita);
+beritaRoutes.put("/:id", ensureAuthenticated, updateBerita);
+beritaRoutes.delete("/:id", ensureAuthenticated, deleteBerita);
 
 module.exports = beritaRoutes;
