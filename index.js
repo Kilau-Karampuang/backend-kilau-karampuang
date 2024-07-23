@@ -36,6 +36,7 @@ mongoose.connect(process.env.MONGO_URI)
 app.get("/", (req, res) => {
   res.send("Kilau Karampuang Backend Services");
 });
+app.use("/api/berita", require("./src/routes/Berita"));
 
 // APP START
 app.listen(5000, () => {
