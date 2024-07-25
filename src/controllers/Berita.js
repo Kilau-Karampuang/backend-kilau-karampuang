@@ -37,6 +37,12 @@ exports.createBerita = async (req, res) => {
 exports.getAllBerita = async (req, res) => {
   Berita.find()
     .then((berita) => {
+      if(berita.length === 0) {
+        return res.status(200).json({
+          message: "Belum ada berita"
+        });
+      };
+      
       res.status(200).json({
         data: berita
       });

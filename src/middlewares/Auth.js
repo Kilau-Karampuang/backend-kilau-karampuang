@@ -1,5 +1,5 @@
 exports.ensureAuthenticated = (req, res, next) => {
-    const secretKey = req.body;
+    const secretKey = req.body.secretKey;
 
     if (!secretKey) {
         return res.status(401).json({
