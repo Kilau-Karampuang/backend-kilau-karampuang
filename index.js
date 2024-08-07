@@ -37,6 +37,7 @@ app.get("/", (req, res) => {
   res.send("Kilau Karampuang Backend Services");
 });
 app.use("/api/berita", require("./src/routes/Berita"));
+app.use("/api/tarian", require("./src/routes/Tarian"));
 
 // APP START
 app.listen(5000, () => {
