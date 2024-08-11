@@ -38,6 +38,7 @@ app.get("/", (req, res) => {
 });
 app.use("/api/berita", require("./src/routes/Berita"));
 app.use("/api/tarian", require("./src/routes/Tarian"));
+app.use("/api/deskripsi-dusun", require("./src/routes/DeskripsiDusun"));
 
 // APP START
 app.listen(5000, () => {
